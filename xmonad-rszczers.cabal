@@ -1,0 +1,32 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: c26c075a377178d7bcc86795c359f3ecbe753199c8ecbffb81add13e875fa401
+
+name:           xmonad-rszczers
+version:        0.0.1
+synopsis:       XMonad Setting
+homepage:       https://github.com/rszczers/.xmonad#readme
+bug-reports:    https://github.com/rszczers/.xmonad/issues
+author:         rszczers
+maintainer:     rafal@szczerski.pl
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/rszczers/.xmonad
+
+executable xmonad
+  main-is: xmonad.hs
+  other-modules:
+      Paths_xmonad_rszczers
+  ghc-options: -Wall -fwarn-tabs -threaded -O2 -with-rtsopts=-N4
+  build-depends:
+      X11
+    , base
+    , xmonad
+    , xmonad-contrib
+  default-language: Haskell2010
